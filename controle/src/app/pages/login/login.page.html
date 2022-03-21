@@ -1,0 +1,56 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <topo-login title="Realizar Login"></topo-login>
+
+  <div id="corpo">
+    <form [formGroup]="loginForm" (submit)="login()">
+      <ion-item>
+        <ion-icon name="mail" color="bitcoin" slot="start"></ion-icon>
+        <ion-input
+          formControlName="email"
+          type="mail"
+          placeholder="Email de usuário"
+          autofocus="true"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="lock-closed" color="bitcoin" slot="start"></ion-icon>
+        <ion-input
+          formControlName="password"
+          type="password"
+          placeholder="Senha de usuário"
+        ></ion-input>
+      </ion-item>
+
+      <ion-button
+        [disabled]="loginForm.invalid"
+        type="submit"
+        expand="block"
+        color="bitcoin"
+        fill="outline"
+        >Login</ion-button
+      >
+    </form>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col>
+      <ion-button [routerLink]="['/forgot']" fill="clear" color="medium"
+        >Esqueci minha senha</ion-button
+      >
+    </ion-col>
+    <ion-col>
+      <ion-button [routerLink]="['/register']" fill="clear" color="medium"
+        >Criar usuário</ion-button
+      >
+    </ion-col>
+  </ion-row>
+</ion-footer>

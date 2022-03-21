@@ -1,0 +1,80 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Registrar</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <topo-login title="Criar Usuário"></topo-login>
+
+  <div id="corpo">
+    <form [formGroup]="loginForm" (submit)="createUser()">
+      <ion-item>
+        <ion-icon name="person" color="bitcoin" slot="start"></ion-icon>
+        <ion-input
+          formControlName="nome"
+          type="text"
+          placeholder="Primeiro Nome"
+          autofocus="true"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="person" color="bitcoin" slot="start"></ion-icon>
+        <ion-input
+          formControlName="snome"
+          type="text"
+          placeholder="Sobrenome"
+          autofocus="true"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="mail" color="bitcoin" slot="start"></ion-icon>
+        <ion-input
+          formControlName="email"
+          type="mail"
+          placeholder="Email de usuário"
+          autofocus="true"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="lock-closed" color="bitcoin" slot="start"></ion-icon>
+        <ion-input
+          formControlName="password"
+          type="password"
+          placeholder="Senha de usuário"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="lock-closed" color="bitcoin" slot="start"></ion-icon>
+        <ion-input
+          formControlName="confirm_pass"
+          type="password"
+          placeholder="Confirmar Senha de Usuário"
+        ></ion-input>
+      </ion-item>
+
+      <ion-button
+        [disabled]="loginForm.invalid"
+        type="submit"
+        expand="block"
+        color="bitcoin"
+        fill="outline"
+        >Registrar</ion-button
+      >
+    </form>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col>
+      <ion-button [routerLink]="['/login']" fill="clear" color="medium"
+        >Voltar</ion-button
+      >
+    </ion-col>
+  </ion-row>
+</ion-footer>

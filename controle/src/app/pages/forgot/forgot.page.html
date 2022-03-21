@@ -1,0 +1,42 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Recuperar Senha</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <topo-login title="Esqueci minha senha"></topo-login>
+
+  <div id="corpo">
+    <form [formGroup]="loginForm" (submit)="recoverPass()">
+      <ion-item>
+        <ion-icon name="mail" color="bitcoin" slot="start"></ion-icon>
+        <ion-input
+          formControlName="email"
+          type="mail"
+          placeholder="Email de usuário"
+          autofocus="true"
+        ></ion-input>
+      </ion-item>
+
+      <ion-button
+        [disabled]="loginForm.invalid"
+        type="submit"
+        expand="block"
+        color="bitcoin"
+        fill="outline"
+        >Enviar</ion-button
+      >
+    </form>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col>
+      <ion-button [routerLink]="['/login']" fill="clear" color="medium"
+        >Voltar</ion-button
+      >
+    </ion-col>
+  </ion-row>
+</ion-footer>
